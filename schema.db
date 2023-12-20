@@ -1,0 +1,17 @@
+create table citas
+(
+    id           bigint unsigned auto_increment
+        primary key,
+    created_at   datetime(3)          null,
+    updated_at   datetime(3)          null,
+    deleted_at   datetime(3)          null,
+    usuario      varchar(100)         not null,
+    titulo       varchar(256)         null,
+    fecha_inicio datetime(3)          null,
+    fecha_fin    datetime(3)          null,
+    all_day      tinyint(1) default 0 null
+);
+
+create index idx_citas_deleted_at
+    on citas (deleted_at);
+

@@ -67,45 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ,
     select: function (arg) {
-      // var title = prompt('BIENVENIDO Title:');
-      // if (title) {
-      //   // Formatea las fechas en formato ISO 8601 con zona horaria 'America/Mexico_City'
-      //   var startFormatted = arg.start.toISOString();
-      //   var endFormatted = arg.end.toISOString();
 
-      //   fetch('http://localhost:3000/api/citas', {
-      //     method: 'POST',
-      //     headers: {
-      //       'Content-Type': 'application/json'
-      //     },
-      //     body: JSON.stringify({
-      //       titulo: title,
-      //       usuario: "luca",
-      //       fecha_inicio: formatDate(startFormatted),
-      //       fecha_fin: formatDate(endFormatted),
-      //     })
-      //   })
-      //     .then(response => response.json())
-      //     .then(data => {
-      //      if(data.success){
-      //       calendar.addEvent({
-      //         title: title,
-      //         start: startFormatted,
-      //         end: endFormatted,
-      //         allDay: arg.allDay
-      //       })
-      //       }else{
-      //         console.log(data)
-      //         alert('No se pudo crear la cita')
-
-      //       }
-      //     }
-      //     )
-      //     .catch((error) => {
-      //       console.error('Error:', error);
-
-      //     })
-      // }
       let startFormatted = arg.start.toISOString();
       let endFormatted = arg.end.toISOString();
       console.log(startFormatted)
@@ -243,31 +205,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
           }
 
-          // fetch('http://localhost:3000/api/citas/' + arg.event.id, {
-          //   method: 'DELETE',
-          //   headers: {
-          //     'Content-Type': 'application/json'
-          //   }
-          // })
-          //   .then(response => response.json())
-          //   .then(data => {
-          //     console.log(data)
-          //     if (data.success) {
-          //       Swal.fire({
-          //         icon: 'success',
-          //         title: 'Cita eliminada correctamente',
-          //         showConfirmButton: false,
-          //         timer: 1500
-          //       })
-          //       arg.event.remove()
-          //     } else {
-          //       Swal.fire({
-          //         icon: 'error',
-          //         title: 'Oops...',
-          //         text: 'No se pudo eliminar!',
-          //       })
-          //     }
-          //   })
         }
       })
     },
